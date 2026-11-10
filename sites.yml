@@ -10,20 +10,23 @@ settings:
 
 sites:
   - name: Teasoo Consulting
-    url: https://example.com
+    url: https://teasooconsulting.com/
     emails:
-      - you@example.com
-      - colleague@example.com
+      - israel.oni@teasooconsulting.com
+      - efeosasere.okoro@teasooconsulting.com
 
-  - name: Client Website
-    url: https://example.org
+  - name: Esangbedo Humanitarian Foundation (EHF)
+    url: https://ehfoundation.africa/
     emails:
-      - you@example.com
+      - israel.oni@teasooconsulting.com
+      - efeosasere.okoro@teasooconsulting.com
     # Optional extras:
     # expected_status: 200          # default: any 2xx or 3xx counts as up
     # must_contain: "Welcome"       # page must contain this text, catches "blank page" failures
 
-  - name: Booking Portal
-    url: https://example.net/login
+  - name: Moatview Apartments
+    url: https://moatviewapartments.com/
     emails:
-      - support@example.net
+      - israel.oni@teasooconsulting.com
+      - efeosasere.okoro@teasooconsulting.com
+      - moatviewapartments@gmail.com
