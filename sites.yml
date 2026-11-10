@@ -14,12 +14,14 @@ sites:
     emails:
       - israel.oni@teasooconsulting.com
       - efeosasere.okoro@teasooconsulting.com
+      - benjamin.abara@teasooconsulting.com
 
   - name: Esangbedo Humanitarian Foundation (EHF)
     url: https://ehfoundation.africa/
     emails:
       - israel.oni@teasooconsulting.com
       - efeosasere.okoro@teasooconsulting.com
+      - benjamin.abara@teasooconsulting.com
     # Optional extras:
     # expected_status: 200          # default: any 2xx or 3xx counts as up
     # must_contain: "Welcome"       # page must contain this text, catches "blank page" failures
@@ -29,9 +31,5 @@ sites:
     emails:
       - israel.oni@teasooconsulting.com
       - efeosasere.okoro@teasooconsulting.com
+      - benjamin.abara@teasooconsulting.com
       - moatviewapartments@gmail.com
-
-  - name: Test
-    url: https://this-does-not-exist-12345.com
-    emails:
-      - io.israeloni@gmail.com
