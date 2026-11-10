@@ -30,3 +30,8 @@ sites:
       - israel.oni@teasooconsulting.com
       - efeosasere.okoro@teasooconsulting.com
       - moatviewapartments@gmail.com
+
+  - name: Test
+    url: https://this-does-not-exist-12345.com
+    emails:
+      - io.israeloni@gmail.com
