@@ -13,5 +13,12 @@
     "name": "Moatview Apartments",
     "up": true,
     "detail": "HTTP 200"
+  },
+  "https://this-does-not-exist-12345.com": {
+    "name": "Test",
+    "up": false,
+    "detail": "Could not connect: [Errno -2] Name or service not known",
+    "down_since": 1794310402.1891837,
+    "last_alert": 1794310402.1891837
   }
 }
