@@ -1,0 +1,45 @@
+name: Website uptime monitor
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # every 5 minutes (GitHub may delay runs a few minutes at busy times)
+  workflow_dispatch:         # lets you click "Run workflow" to test manually
+
+permissions:
+  contents: write            # needed to save status.json back to the repo
+
+concurrency:
+  group: site-monitor
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pyyaml
+
+      - name: Check sites
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          ALERT_FROM: ${{ secrets.ALERT_FROM }}
+        run: python monitor.py
+
+      - name: Save status (only when something changed)
+        run: |
+          if [[ -n "$(git status --porcelain status.json)" ]]; then
+            git config user.name  "site-monitor-bot"
+            git config user.email "site-monitor-bot@users.noreply.github.com"
+            git add status.json
+            git commit -m "Update site status"
+            git push
+          fi

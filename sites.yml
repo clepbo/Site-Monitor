@@ -1,0 +1,29 @@
+# ------------------------------------------------------------
+#  Sites to monitor
+#  Add as many as you like. Each site gets its own alert emails.
+# ------------------------------------------------------------
+
+settings:
+  timeout_seconds: 15        # how long to wait before calling a site "down"
+  retries: 2                 # re-check this many times before alerting (avoids false alarms)
+  remind_every_hours: 6      # while a site stays down, re-send an alert this often (0 = never)
+
+sites:
+  - name: Teasoo Consulting
+    url: https://example.com
+    emails:
+      - you@example.com
+      - colleague@example.com
+
+  - name: Client Website
+    url: https://example.org
+    emails:
+      - you@example.com
+    # Optional extras:
+    # expected_status: 200          # default: any 2xx or 3xx counts as up
+    # must_contain: "Welcome"       # page must contain this text, catches "blank page" failures
+
+  - name: Booking Portal
+    url: https://example.net/login
+    emails:
+      - support@example.net
