@@ -1,0 +1,17 @@
+{
+  "https://teasooconsulting.com/": {
+    "name": "Teasoo Consulting",
+    "up": true,
+    "detail": "HTTP 200"
+  },
+  "https://ehfoundation.africa/": {
+    "name": "Esangbedo Humanitarian Foundation (EHF)",
+    "up": true,
+    "detail": "HTTP 200"
+  },
+  "https://moatviewapartments.com/": {
+    "name": "Moatview Apartments",
+    "up": true,
+    "detail": "HTTP 200"
+  }
+}
